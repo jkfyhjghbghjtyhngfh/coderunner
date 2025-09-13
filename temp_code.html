@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Long JS Example</title>
+</head>
+<body>
+  <h1>Click the Button</h1>
+  <button id="runScript">Run the Script</button>
+
+  <script>
+    // --- Put your long JavaScript here ---
+    const MESSAGE = "Hello from an unnecessarily long JavaScript file!";
+
+    function showFinalAlert(msg) {
+      alert(msg);
+    }
+
+    document.getElementById("runScript").addEventListener("click", function () {
+      showFinalAlert(MESSAGE);
+    });
+  </script>
+</body>
+</html>
