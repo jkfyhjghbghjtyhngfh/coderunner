@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 LANG_COMMANDS = {
     'python': lambda file: ['python3', file],
-    'java': lambda file: ['javac', file] if file.endswith('.java') else ['java', file],
+    'javascript': lambda file: ['node', file],
     'bash': lambda file: ['bash', file],
     'batch': lambda file: ['cmd', '/c', file],
     'html': lambda file: ['xdg-open', file],
@@ -15,7 +15,7 @@ LANG_COMMANDS = {
 
 EXT_MAP = {
     'python': '.py',
-    'java': '.java',
+    'javascript': '.js',
     'bash': '.sh',
     'batch': '.bat',
     'html': '.html',
@@ -37,7 +37,7 @@ HTML = '''
         <label for="language">Language:</label>
         <select name="language" id="language">
             <option value="python">Python</option>
-            <option value="java">Java</option>
+            <option value="javascript">JavaScript</option>
             <option value="bash">Bash</option>
             <option value="batch">Batch</option>
             <option value="html">HTML</option>
